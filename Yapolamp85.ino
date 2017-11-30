@@ -1,4 +1,6 @@
 /* Yapolamp is an experimental torch/flashlight intended to be safer for children
+ Copyright 2008-2017 Simon Merrett, Nick Gammon and Martin Nawrath
+ 
  Current bootloader settings: ATtiny85 @8Mhz (internal oscillator; BOD disabled)
  Current version:  Yapolamp85_06 tidies up some unused lines and removes Arduino code where e.g. assembly has replaced it.
  Previous versions:
@@ -6,6 +8,19 @@
  Yapolamp85_04 adds assembly code delays to ensure accurate pulse and delay timings at 8 MHz. 
  Also shifts from just interrupts to make the watchdog help with timing-out the ON and Transition modes
  Yapolamp85_03 has implemented port manipulation on the ATtiny85 and starts to introduce the control logic for different modes
+ 
+     This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include <avr/io.h> //ATtiny85 required library
 #include <avr/sleep.h> //Needed for ATtiny85 sleep_mode
